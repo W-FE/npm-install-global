@@ -1,0 +1,23 @@
+{
+  "name": "npm-install-global",
+  "version": "1.0.0",
+  "description": "一键安装全局npm模块",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/W-FE/npm-install-global.git"
+  },
+  "keywords": [
+    "nvm",
+    "npm",
+    "node"
+  ],
+  "author": "flitrue",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/W-FE/npm-install-global/issues"
+  },
+  "homepage": "https://github.com/W-FE/npm-install-global#readme"
+}
