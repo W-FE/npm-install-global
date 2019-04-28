@@ -11,7 +11,7 @@ const options = process.argv.slice(2);
 
 console.log('')
 
-if(options.length<3) {
+if(options.length<0) {
   console.log('Warning: 请传入需要安装的模块名称')
   return false
 }
