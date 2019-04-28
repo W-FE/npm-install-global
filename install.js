@@ -34,7 +34,7 @@ fs.readFile(path.join(__dirname, 'data.json'), 'utf8', function(err, data){
     }
   }
 
-  let json = JSON.stringify(data)
+  let json = JSON.stringify(data, null, '\t')
   writeFile(json)
 
 })

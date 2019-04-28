@@ -1,1 +1,8 @@
-{"modules":["pm2","now","serve","yarn"]}
+{
+	"modules": [
+		"pm2",
+		"now",
+		"serve",
+		"yarn"
+	]
+}
