@@ -7,16 +7,17 @@ const fs = require('fs')
 const path = require('path')
 const { exec} = require('child_process')
 
-const options = process.argv;
+const options = process.argv.slice(2);
 
 console.log('')
 
-if(!options[2]) {
+if(options.length<3) {
   console.log('Warning: 请传入需要安装的模块名称')
   return false
 }
-
-const cmd = 'npm i -g ' + options[2]
+ 
+const cmd = 'npm i -g ' + options.join(' ')
+console.log("> " + cmd)
 execCommand(cmd)
 
 
@@ -27,14 +28,14 @@ fs.readFile(path.join(__dirname, 'data.json'), 'utf8', function(err, data){
   data = JSON.parse(data)
   arr = data.modules
 
-  for(let i=0;i<arr.length;i++){
-    if(arr[i] != options[2]){
-      data.modules.push(options[2])
-      let json = JSON.stringify(data)
-      writeFile(json)
-      break;
+  for(let i=0;i<options.length;i++){
+    if(!arr.includes(options[i])){
+      data.modules.push(options[i])
     }
   }
+
+  let json = JSON.stringify(data)
+  writeFile(json)
 
 })
 
